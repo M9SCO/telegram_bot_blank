@@ -1,1 +1,4 @@
-print('inline opened')
+def Inline(bot, update):
+    pass
+
+print('inline detect')
