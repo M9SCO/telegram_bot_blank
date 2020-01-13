@@ -29,4 +29,3 @@ def left_chat_member(bot, update):
     pass
 
 
-print('message detect')

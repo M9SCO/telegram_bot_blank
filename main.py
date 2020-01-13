@@ -1,20 +1,20 @@
+import logging
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler, InlineQueryHandler
 
 
 from bin.data import const
 
-
 from bot.cmds import start
-
 from bot.msg import Messages
-
 from bot.btns import Button
-
 from bot.inln import Inline
 
+logging.basicConfig(format='--- %(asctime)s ---\n%(filename)s %(levelname)s in line %(lineno)s \n%(message)s',
+                    level=logging.ERROR)
 
 def bot_start():
-    updater = Updater(const["token"])
+    updater = Updater(const.token)
     dispatcher = updater.dispatcher
 
     '''cmds'''
@@ -34,8 +34,20 @@ def bot_start():
     dispatcher.add_handler(InlineQueryHandler(Inline))
 
     """starting works"""
-    print('\n === == === \nBot worked')
+    start_message= '''\
+     　　／＞　    フ 
+　　　　　| 　_　 _| 
+　 　　　／`ミ _x 彡 
+　　 　 /　　　 　 | 
+　　　 /　 ヽ　　 ﾉ 
+　／￣|　　 |　|　| 
+　| (￣ヽ＿_ヽ_)_) 
+　 ＼二つ
+
+bot already worked
+'''
+    print(start_message)
     updater.start_polling(clean=True)
-    updater.idle()
+    # updater.idle()
 if __name__ == '__main__':
     bot_start()

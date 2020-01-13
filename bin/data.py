@@ -1,11 +1,14 @@
-import logging
-import json
-#from  bin.database import db_command as db_request
-const = json.loads(open("bin/constants").read())
+class Constants:
+    class DataBase:
+        def __init__(self):
+            host = ''
+            name = ''
+            user = ''
+            pasw = ''
+
+    def __init__(self):
+        self.token = ''
 
 
-logging.basicConfig(filename='find_ exeption.log',
-                    format='--- %(asctime)s ---\n%(filename)s %(levelname)s in line %(lineno)s \n%(message)s',
-                    level=logging.ERROR)
+const = Constants()
 
-print('data opened')
