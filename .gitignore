@@ -1,3 +1,4 @@
-.gitignore
-.idea
-find_ exeption.log
+/.idea/
+/__pycache__/
+/bin/__pycache__/
+/bin/config.py
